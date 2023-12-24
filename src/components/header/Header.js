@@ -16,10 +16,12 @@ function Header() {
               <button type="button">Search</button>
             </div>
           </div>
-          <div className="right-side">
-            <i className="fa-solid fa-heart"></i>
-            <div className="order">Orders</div>
-          </div>
+          <NavLink to="/orders">
+            <div className="right-side">
+              <i className="fa-solid fa-heart"></i>
+              <div className="order">Orders</div>
+            </div>
+          </NavLink>
         </nav>
         <div className="search-mobile">
           <input type="text" placeholder="Search" />
