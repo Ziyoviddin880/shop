@@ -6,18 +6,6 @@ import { useState } from "react";
 function Main() {
   const [checkboxValue, setCheckboxValue] = useState([]);
 
-  // const reducer = (state,action) => {
-  //   switch(action.type){
-  //     case "SAMSUNG":
-  //     state={
-  //       ...state,
-
-  //     }
-  //   }
-  // };
-
-  // const [state, dispatch] = useReducer(reducer, {});
-
   return (
     <div className="container">
       <div className="mobile-category">

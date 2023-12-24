@@ -8,7 +8,7 @@ function Product() {
   const { data } = useContext(dataContext);
   const { id } = useParams();
   const dataId = data.find((val) => {
-    return val.id == id;
+    return val.id === parseInt(id);
   });
   console.log(dataId);
 
@@ -139,7 +139,9 @@ function Product() {
             Info about edu item is an ideal companion for anyone engaged in
             learning. The drone provides precise and ...
           </div>
-          <a className="read-more">Read more</a>
+          <a href="read-more" className="read-more">
+            Read more
+          </a>
         </div>
       </div>
       <ShopNow />
