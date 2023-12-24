@@ -1,15 +1,53 @@
 import ShopNow from "../shopNow/ShopNow";
 import "./orders.scss";
+import { NavLink } from "react-router-dom";
+import { useReducer } from "react";
 
 function Orders() {
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "STATE_1":
+        console.log(action.type);
+        state = {
+          ...state,
+          state1: !state.state1,
+        };
+        break;
+      case "STATE_2":
+        state = {
+          ...state,
+          state2: !state.state2,
+        };
+        break;
+      case "STATE_3":
+        state = {
+          ...state,
+          state3: !state.state3,
+        };
+        break;
+      default:
+        break;
+    }
+    return state;
+  };
+  const [state, dispatch] = useReducer(reducer, {
+    state1: false,
+    state2: false,
+    state3: false,
+  });
+
+  const boolenFunc = (type) => {
+    dispatch({ type: type });
+  };
   return (
     <div>
       <div className="container">
         <div className="order-title">
           Orders <span>(3)</span>
+          {console.log(state)}
         </div>
         <div className="orders">
-          <div className="order">
+          <div className={state.state1 ? "d-none" : "order"}>
             <div className="left">
               <div className="for-img">
                 <img src="./images/order.svg" alt="Order" />
@@ -23,7 +61,9 @@ function Orders() {
                   Market
                 </div>
                 <div className="btns">
-                  <button type="button">Remove</button>
+                  <button onClick={() => boolenFunc("STATE_1")} type="button">
+                    Remove
+                  </button>
                   <button type="button">Save for later</button>
                 </div>
               </div>
@@ -37,7 +77,7 @@ function Orders() {
               </select>
             </div>
           </div>
-          <div className="order">
+          <div className={state.state2 ? "d-none" : "order"}>
             <div className="left">
               <div className="for-img">
                 <img src="./images/order.svg" alt="Order" />
@@ -51,7 +91,9 @@ function Orders() {
                   Market
                 </div>
                 <div className="btns">
-                  <button type="button">Remove</button>
+                  <button onClick={() => boolenFunc("STATE_2")} type="button">
+                    Remove
+                  </button>
                   <button type="button">Save for later</button>
                 </div>
               </div>
@@ -65,7 +107,7 @@ function Orders() {
               </select>
             </div>
           </div>
-          <div className="order">
+          <div className={state.state3 ? "d-none" : "order"}>
             <div className="left">
               <div className="for-img">
                 <img src="./images/order.svg" alt="Order" />
@@ -79,7 +121,9 @@ function Orders() {
                   Market
                 </div>
                 <div className="btns">
-                  <button type="button">Remove</button>
+                  <button onClick={() => boolenFunc("STATE_3")} type="button">
+                    Remove
+                  </button>
                   <button type="button">Save for later</button>
                 </div>
               </div>
@@ -95,7 +139,7 @@ function Orders() {
           </div>
 
           <button className="backShop" type="button">
-            Back to shop
+            <NavLink to="/">Back to shop</NavLink>
           </button>
         </div>
       </div>

@@ -12,6 +12,9 @@
   padding: 2.3rem 2.677rem;
   background-color: white;
   border-radius: 1rem;
+  .d-none {
+    display: none;
+  }
   .order {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -88,6 +91,10 @@
     background-color: $site-color;
     border: none;
     border-radius: 0.5rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 

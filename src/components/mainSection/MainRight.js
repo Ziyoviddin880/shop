@@ -63,9 +63,7 @@ function MainRight({ setCheckboxValue, checkboxValue }) {
         <span className="pagination">
           {pageNumbers.map((number) => (
             <span key={number} onClick={() => paginate(number)}>
-              <a className="active" href="number">
-                {number}
-              </a>
+              {number}
             </span>
           ))}
         </span>
