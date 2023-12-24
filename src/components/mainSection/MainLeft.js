@@ -42,6 +42,8 @@ function MainLeft({ checkboxValue, setCheckboxValue }) {
           selectFeatures: !state.selectFeatures,
         };
         break;
+      default:
+        break;
     }
     return state;
   };
