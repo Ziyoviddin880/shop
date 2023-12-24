@@ -1,0 +1,108 @@
+@import "../../variables.scss";
+
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 4.5rem;
+      .search {
+        display: flex;
+        align-items: center;
+        input {
+          padding: 1rem;
+          font-size: 1.6rem;
+          border: 1px solid $site-color;
+          outline: 1px solid $site-color;
+          border-radius: 0.5rem;
+          width: 40rem;
+          &:focus-visible {
+          }
+          &::placeholder {
+            color: #8b96a5;
+          }
+        }
+        button {
+          font-size: 1.6rem;
+          font-weight: 500;
+          background-color: $site-color;
+          color: white;
+          border-radius: 0.5rem;
+          padding: 1rem 1.2rem;
+          border: none;
+        }
+      }
+    }
+    .right-side {
+      color: #8b96a5;
+      text-align: center;
+      i {
+        font-size: 2.2rem;
+      }
+      .order {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+  .search-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    nav {
+      .left-side {
+        gap: 2rem;
+        .search {
+          input {
+            width: 20rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    nav {
+      .left-side {
+        .search {
+          display: none;
+        }
+      }
+    }
+
+    .search-mobile {
+      display: block;
+      text-align: center;
+      input {
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: 1px solid $site-color;
+        outline: 1px solid $site-color;
+        border-radius: 0.5rem;
+        max-width: 40rem;
+        &:focus-visible {
+        }
+        &::placeholder {
+          color: #8b96a5;
+        }
+      }
+      button {
+        font-size: 1.6rem;
+        font-weight: 500;
+        background-color: $site-color;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 1rem 1.2rem;
+        border: none;
+      }
+    }
+  }
+}

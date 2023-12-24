@@ -1,0 +1,125 @@
+@import "../../variables.scss";
+
+.mainRight {
+  width: 78%;
+  .categories {
+    margin-bottom: 6rem;
+    width: 100%;
+    display: flex;
+    gap: 0.8rem;
+    overflow: auto;
+
+    .menu {
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+
+      &:not(:last-child) {
+        padding: 0.65rem 1rem;
+        border: 1px solid $site-color;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        color: #505050;
+      }
+      &:last-child {
+        color: $site-color;
+        cursor: pointer;
+      }
+      i {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .limit-product {
+    text-align: end;
+    .limit {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: white;
+      font-size: 1.6rem;
+      select {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .pagination {
+    margin-left: 3.7rem;
+    span {
+      padding: 0.8rem 1rem;
+      background-color: white;
+      border: 1px solid #e3e8ee;
+      font-size: 1.6rem;
+      cursor: pointer;
+      &:first-child {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        i {
+          transform: rotateZ(-180deg);
+        }
+      }
+      &:last-child {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .mainRight {
+    width: 78%;
+    .products {
+      gap: 10%;
+      .product {
+        width: 45%;
+
+        .product-img {
+          padding: 2.9rem 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainRight {
+    width: 73%;
+    .products {
+      gap: 10%;
+      .product {
+        width: 45%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .mainRight {
+    width: 65%;
+    .products {
+      gap: 0;
+      justify-content: center;
+      .product {
+        width: 80%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mainRight {
+    .products {
+      .product {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainRight {
+    width: 100%;
+  }
+}

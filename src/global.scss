@@ -7,3 +7,25 @@
 html {
   font-size: 10px;
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-SemiBold.ttf");
+  font-weight: 600;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.1rem;
+}

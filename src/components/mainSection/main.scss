@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+main {
+  background-color: #f7fafc;
+  padding: 3rem 0;
+  .mainSection {
+    display: flex;
+    gap: 2%;
+  }
+  .mobile-category {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    .mobile-category {
+      display: block;
+      margin-bottom: 2rem;
+      &__menu {
+        display: flex;
+        width: 100%;
+        overflow: auto;
+        gap: 1rem;
+        &-item {
+          padding: 0.9rem 1.5rem;
+          background-color: #eff2f4;
+          font-size: 1.6rem;
+          border-radius: 0.5rem;
+          color: $site-color;
+        }
+      }
+    }
+  }
+}

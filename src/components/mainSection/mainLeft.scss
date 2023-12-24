@@ -1,0 +1,78 @@
+@import "../../variables.scss";
+
+.mainLeft {
+  width: 20%;
+  .select {
+    font-size: 1.6rem;
+    .select-title {
+      cursor: pointer;
+      color: $text-color;
+      font-weight: bold;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        i {
+          transform: rotateZ(-90deg);
+        }
+        .close {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+    ul {
+      li {
+        list-style: none;
+        padding: 0.9rem 0;
+        display: flex;
+        align-items: center;
+        input {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1.3rem;
+        }
+      }
+      .d-none {
+        display: none;
+      }
+      .d-block {
+        display: block;
+      }
+    }
+    .allSee {
+      color: $site-color;
+      cursor: pointer;
+      padding: 0.9rem 0;
+      margin-bottom: 2rem;
+    }
+    .d-none {
+      display: none;
+    }
+    .d-block {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainLeft {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .mainLeft {
+    width: 33%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mainLeft {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainLeft {
+    width: 0;
+    display: none;
+  }
+}
